@@ -1,0 +1,209 @@
+
+body {
+    background-color: #F3F5FC;
+    font-family: 'Inter', sans-serif;
+}
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+main .logo {
+    width: 10vw;
+   
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2em;
+
+}
+
+main .logo img {
+    width: 10em;
+}
+main .input_mensaje {
+   
+    width: 60vw;
+    padding-top: 15vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .input_mensaje .mensaje_contenedor {
+    width: 70%;
+}
+main .input_mensaje .mensaje_contenedor textarea {
+    width: 100%;
+    resize: none;
+    background: transparent;
+    font-size: 2em;
+    border: none;
+    height: 70vh;
+    padding: 0;
+    color: #0A3871;
+}
+main .input_mensaje .mensaje_contenedor textarea::placeholder{
+    color: #0A3871;
+}
+main .input_mensaje .mensaje_contenedor textarea:focus {
+    outline: none;
+}
+main .input_mensaje .bottom {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    padding-top: 1em;
+
+}
+
+main .resultado_mensaje{
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .resultado_mensaje .resultado {
+    background-color: #FFF;
+    height: 90vh;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    box-shadow: 0em 0em 2em 0.1em rgba(0, 0, 0, 0.315) ;
+    
+}
+main .resultado_mensaje .resultado .mensaje {
+    overflow: auto;
+    margin-top: 1em;
+   
+}
+main .resultado .no_encontrado {
+    text-align: center;
+}
+
+main .resultado .mensaje_encontrado {
+    word-break: break-all;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+main .resultado .mensaje_encontrado h3 {
+    font-weight: 400;
+    font-size: 1.5em;
+}
+main .resultado .mensaje_encontrado button {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+main .resultado .no_encontrado img {
+    width: 100%;
+}
+main .resultado .mensaje_encontrado,
+main .resultado .no_encontrado {
+    padding: 2em;
+}
+main .resultado_mensaje .resultado img {
+    display: none;
+}
+main .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+main .button {
+    padding: 1em;
+    width: 100%;
+    border-radius: 1em;
+    border: 2px solid #0A3871;
+    transition: border-color 250ms background-color 250ms;
+}
+main .button:hover {
+    cursor: pointer;
+}
+main .button-primary {
+    background-color: #0A3871;
+    color: #F3F5FC;
+    font-weight: 400;
+}
+main .button-primary:hover {
+    background-color: #164e92;
+    border-color: #164e92;
+
+}
+main .button-secondary {
+    background-color: transparent;
+    color: #0A3871;
+    font-weight: 400;
+}
+main .button-secondary:hover {
+    background-color: #D8DFE8;
+}
+
+main .bottom small {
+    color: #495057;
+    font-weight: 500;
+    display: flex;
+    align-items: end;
+}
+main .bottom small img {
+    padding-right: 0.25em;
+}
+
+@media screen and (max-width: 1400px) {
+    main .input_mensaje {
+        width: 50vw;
+    }
+    main .resultado_mensaje {
+        width: 40vw;
+    }
+}
+@media screen and (max-width: 1023px) {
+    main {
+        flex-direction: column;
+    }
+    main .logo,
+    main .input_mensaje, 
+    main .resultado_mensaje {
+        width: 100%;
+    }
+    main .logo {
+        justify-content: flex-start;
+    }
+    main .logo img {
+        padding-left: 2em;
+    }
+    main .input_mensaje {
+        padding-top: 5vh;
+    }
+    main .input_mensaje .mensaje_contenedor {
+        width: 100%;
+        padding: 2em;
+    }
+    main .input_mensaje .mensaje_contenedor textarea {
+        height: 50vh;
+    }
+    main .resultado_mensaje .resultado {
+        width: 100%;
+        margin: 2em;
+        height: auto;
+    }
+    main .resultado_mensaje .resultado img {
+        display: none;
+    }
+    main .resultado_mensaje .resultado .mensaje {
+        max-height: 65vh;
+    }
+    main .resultado_mensaje .resultado button {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    main .buttons {
+        flex-direction: column;
+    }
+}
