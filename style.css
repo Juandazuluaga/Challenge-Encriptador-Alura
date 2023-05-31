@@ -73,6 +73,8 @@ main .resultado_mensaje .resultado {
     align-items: center;
     border-radius: 2em;
     box-shadow: 0em 0em 2em 0.1em rgba(0, 0, 0, 0.315) ;
+    padding: 2rem;
+
     
 }
 main .resultado_mensaje .resultado .mensaje {
@@ -91,9 +93,13 @@ main .resultado .mensaje_encontrado {
     justify-content: space-between;
     height: 100%;
 }
-main .resultado .mensaje_encontrado h3 {
+main .resultado .mensaje_encontrado textarea {
     font-weight: 400;
     font-size: 1.5em;
+    border: none;
+    resize: none;
+    flex-grow: 1;
+    outline: none;
 }
 main .resultado .mensaje_encontrado button {
     margin-top: 2em;
@@ -106,9 +112,7 @@ main .resultado .mensaje_encontrado,
 main .resultado .no_encontrado {
     padding: 2em;
 }
-main .resultado_mensaje .resultado img {
-    display: none;
-}
+
 main .buttons {
     display: flex;
     flex-direction: row;
@@ -206,4 +210,19 @@ main .bottom small img {
     main .buttons {
         flex-direction: column;
     }
+}
+
+.oculto{
+    display: none !important; 
+
+   
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: #0A3871;
+    text-align: center;
 }

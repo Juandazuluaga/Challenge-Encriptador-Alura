@@ -23,30 +23,31 @@
                 <div class="bottom">
                     <small><img src="imagenes/Vector.svg"> Solo letras minúsculas y sin acentos</small>
                     <div class="buttons">
-                        <button class="button button-primary" onclick="encrypt()">Encriptar</button>
-                        <button class="button button-secondary" onclick="decrypt()">Desencriptar</button>
+                        <button id="botonEncriptar" class="button button-primary">Encriptar</button>
+                        <button id="botonDesencriptar" class="button button-secondary">Desencriptar</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="resultado_mensaje">
+        <div class="resultado_mensaje"> 
             <div class="resultado">
-                <div class="no_encontrado">
+                <div class="no_encontrado" id="seccionNoEncontrado">
                     <img src="imagenes/muneco.png" alt="No encontrado">
                     <h2>Ningún mensaje fue encontrado</h2>
                     <p>Ingrese el texto que desea encriptar o desencriptar</p>
                 </div>
-                <div class="mensaje_encontrado">
-                    <div class="mensaje">
-                        <h3 id="encryptedMessage"></h3>
-                    </div>
-                    <button class="button button-secondary" onclick="copyToClipboard()">Copiar</button>
+                <div class="mensaje_encontrado oculto"  id="seccionEncontrado">
+                        <textarea id="resultadoTexto"></textarea>
+                        <button id="botonCopiar" class="button button-secondary">Copiar</button>
                 </div>
             </div>
         </div>
     </main>
-
-    <script src="main.js"></script> 
+    <footer> 
+        <p>Juan David Zuluaga 2023 Grupo 5 Oracle Next Education</p>
+    
+    </footer>
+     <script src="main.js"></script> 
 </body>
 </html>
